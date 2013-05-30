@@ -106,6 +106,7 @@ module VCAP::CloudController
       rescue StandardError => e
         # NotFound errors do not share a common superclass so we have to determine it by name
         # A github issue for fog will be created.
+        # See https://github.com/fog/fog/issues/1848
         if e.class.name.split('::').last.eql?("NotFound")
           logger.warn("Failed to delete droplet: #{e}\n#{e.backtrace}")
           true

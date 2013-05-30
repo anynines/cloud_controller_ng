@@ -76,20 +76,35 @@ default_quota_definition: free
 resource_pool:
   resource_directory_key: cc-resources
   fog_connection:
-    provider: Local
-    local_root: /tmp
+    provider: 'HP'
+    hp_access_key: "testing"
+    hp_secret_key: "eiShie7p"
+    hp_tenant_id: "d4e1c14691d841f6b53a24b6c4c42a0e"
+    hp_auth_uri:  'https://auth.hydranodes.de:5000/v2.0/'
+    hp_use_upass_auth_style: true
+    hp_avl_zone: 'nova'
 
 packages:
   resource_directory_key: cc-packages
   fog_connection:
-    provider: Local
-    local_root: /tmp
+    provider: 'HP'
+    hp_access_key: "testing"
+    hp_secret_key: "eiShie7p"
+    hp_tenant_id: "d4e1c14691d841f6b53a24b6c4c42a0e"
+    hp_auth_uri:  'https://auth.hydranodes.de:5000/v2.0/'
+    hp_use_upass_auth_style: true
+    hp_avl_zone: 'nova'    
 
 droplets:
   droplet_directory_key: cc-droplets
   fog_connection:
-    provider: Local
-    local_root: /tmp
+    provider: 'HP'
+    hp_access_key: "testing"
+    hp_secret_key: "eiShie7p"
+    hp_tenant_id: "d4e1c14691d841f6b53a24b6c4c42a0e"
+    hp_auth_uri:  'https://auth.hydranodes.de:5000/v2.0/'
+    hp_use_upass_auth_style: true
+    hp_avl_zone: 'nova'    
 
 db_encryption_key: "asdfasdfasdf"
 
